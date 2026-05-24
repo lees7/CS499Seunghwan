@@ -1,289 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ENHANCEMENT 1 -->
 
-    <title>CS 499 ePortfolio | Seunghwan Lee</title>
+<section class="section" id="enhancement1">
 
-    <style>
+    <h2>Enhancement One: Software Design and Engineering</h2>
 
-        body{
-            margin:0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color:#f4f4f4;
-            color:#222;
-            line-height:1.7;
-        }
+    <h3>Artifact Overview</h3>
 
-        header{
-            background-color:#111827;
-            color:white;
-            padding:40px 20px;
-            text-align:center;
-        }
+    <p>
+        The artifact selected for this enhancement was originally developed in
+        CS-330 Computational Graphics and Visualization. The original project focused
+        on implementing foundational graphics rendering concepts using OpenGL,
+        including shader programs, vertex buffer objects, and geometric rendering.
+    </p>
 
-        header h1{
-            margin:0;
-            font-size:2.7rem;
-        }
+    <p>
+        The original artifact displayed simple geometric objects using basic color
+        rendering techniques. For this enhancement, the project was expanded to
+        include advanced lighting calculations, interactive camera controls,
+        perspective projection, depth testing, and improved rendering architecture.
+    </p>
 
-        header p{
-            margin-top:10px;
-            color:#d1d5db;
-        }
+    <h3>Final Enhanced Result</h3>
 
-        nav{
-            background-color:#1f2937;
-            padding:15px;
-            text-align:center;
-        }
+    <div style="text-align:center; margin-top:20px;">
 
-        nav a{
-            color:white;
-            text-decoration:none;
-            margin:0 20px;
-            font-weight:bold;
-        }
+        <img src="Final Result.png"
+             alt="Enhanced 3D Pyramid Rendering"
+             style="width:80%; max-width:700px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.3);">
 
-        nav a:hover{
-            color:#60a5fa;
-        }
-
-        .container{
-            width:85%;
-            max-width:1100px;
-            margin:40px auto;
-        }
-
-        .section{
-            background:white;
-            padding:35px;
-            margin-bottom:35px;
-            border-radius:10px;
-            box-shadow:0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        h2{
-            color:#1f2937;
-            border-bottom:2px solid #e5e7eb;
-            padding-bottom:10px;
-        }
-
-        h3{
-            color:#374151;
-            margin-top:25px;
-        }
-
-        ul{
-            padding-left:20px;
-        }
-
-        .placeholder{
-            background-color:#f9fafb;
-            border-left:5px solid #9ca3af;
-            padding:15px;
-            margin-top:20px;
-        }
-
-        .highlight{
-            background-color:#e0f2fe;
-            border-left:5px solid #0284c7;
-            padding:15px;
-            margin-top:20px;
-        }
-
-        footer{
-            background-color:#111827;
-            color:white;
-            text-align:center;
-            padding:20px;
-            margin-top:40px;
-        }
-
-    </style>
-</head>
-
-<body>
-
-<header>
-    <h1>CS 499 Computer Science ePortfolio</h1>
-    <p>Seunghwan Lee</p>
-</header>
-
-<nav>
-    <a href="#introduction">Introduction</a>
-    <a href="#enhancement1">Enhancement 1</a>
-    <a href="#enhancement2">Enhancement 2</a>
-    <a href="#enhancement3">Enhancement 3</a>
-</nav>
-
-<div class="container">
-
-    <!-- INTRODUCTION -->
-
-    <section class="section" id="introduction">
-
-        <h2>Introduction</h2>
-
-        <p>
-            Welcome to my CS 499 Computer Science ePortfolio. This portfolio showcases
-            the skills, knowledge, and technical growth I developed throughout the
-            Computer Science program at Southern New Hampshire University.
+        <p style="margin-top:15px; color:#555;">
+            Figure 1: Enhanced 3D pyramid rendering with lighting, transformations,
+            and improved graphical functionality.
         </p>
 
-        <p>
-            The purpose of this ePortfolio is to demonstrate my ability to design,
-            develop, improve, and evaluate software applications through practical
-            projects and technical enhancements. Each enhancement included in this
-            portfolio reflects important computer science concepts such as software
-            engineering, algorithms and data structures, databases, graphics programming,
-            debugging, and software refinement.
-        </p>
+    </div>
 
-        <p>
-            Throughout the program, I gained experience working with programming
-            languages, software development tools, graphics libraries, and problem-solving
-            techniques used in modern computing environments. The artifacts presented
-            in this portfolio demonstrate both technical implementation skills and the
-            ability to improve existing software through meaningful engineering enhancements.
-        </p>
+    <h3>Enhancements Implemented</h3>
 
-        <div class="highlight">
-            <strong>Core Skills Demonstrated:</strong>
-            <ul>
-                <li>Software Design and Engineering</li>
-                <li>Debugging and Testing</li>
-                <li>Object-Oriented Programming</li>
-                <li>Computer Graphics Programming</li>
-                <li>Problem Solving and Optimization</li>
-                <li>Technical Communication</li>
-            </ul>
-        </div>
+    <ul>
+        <li>Implemented Phong lighting model</li>
+        <li>Added ambient, diffuse, and specular lighting</li>
+        <li>Integrated interactive camera movement</li>
+        <li>Added keyboard and mouse controls</li>
+        <li>Implemented depth testing and perspective projection</li>
+        <li>Created dynamic orbiting light animation</li>
+        <li>Improved shader organization and rendering structure</li>
+        <li>Integrated additional graphics libraries</li>
+        <li>Improved maintainability and debugging capability</li>
+    </ul>
 
-    </section>
+    <h3>Software Engineering Improvements</h3>
 
+    <p>
+        One major focus of this enhancement was improving the software engineering
+        quality of the original application. The original project relied heavily
+        on procedural rendering logic with limited modularity. During enhancement,
+        the rendering system was reorganized into reusable components and callback
+        functions to improve maintainability and readability.
+    </p>
 
-    <!-- ENHANCEMENT 1 -->
+    <p>
+        The enhanced version also introduced more advanced graphical features using
+        OpenGL, GLFW, GLEW, GLM, and stb_image libraries. These additions improved
+        rendering realism while also demonstrating the ability to integrate
+        industry-standard graphics technologies into an existing software project.
+    </p>
 
-    <section class="section" id="enhancement1">
+    <h3>Reflection</h3>
 
-        <h2>Enhancement One: Software Design and Engineering</h2>
+    <p>
+        Through this enhancement process, I gained valuable experience in graphics
+        programming, shader debugging, rendering optimization, and software
+        refinement. One of the most important lessons learned was the importance
+        of modular software design when building increasingly complex graphical
+        applications.
+    </p>
 
-        <h3>Artifact Overview</h3>
+    <p>
+        Several technical challenges occurred during development, including lighting
+        calculations, transformation management, camera movement, and debugging
+        rendering behavior. Solving these issues strengthened my understanding
+        of real-time graphics rendering and improved my debugging and
+        problem-solving abilities.
+    </p>
 
-        <p>
-            The artifact selected for this enhancement was originally developed in
-            CS-330 Computational Graphics and Visualization. The original project focused
-            on implementing foundational graphics rendering concepts using OpenGL,
-            including shader programs, vertex buffer objects, and geometric rendering.
-        </p>
-
-        <p>
-            The original artifact displayed simple geometric objects using basic color
-            rendering techniques. For this enhancement, the project was expanded to
-            include advanced lighting calculations, interactive camera controls,
-            perspective projection, depth testing, and improved rendering architecture.
-        </p>
-
-        <h3>Enhancements Implemented</h3>
-
+    <div class="highlight">
+        <strong>Technologies Used:</strong>
         <ul>
-            <li>Implemented Phong lighting model</li>
-            <li>Added ambient, diffuse, and specular lighting</li>
-            <li>Integrated interactive camera movement</li>
-            <li>Added keyboard and mouse controls</li>
-            <li>Implemented depth testing and perspective projection</li>
-            <li>Created dynamic orbiting light animation</li>
-            <li>Improved shader organization and rendering structure</li>
-            <li>Integrated additional graphics libraries</li>
-            <li>Improved maintainability and debugging capability</li>
+            <li>C++</li>
+            <li>OpenGL</li>
+            <li>GLFW</li>
+            <li>GLEW</li>
+            <li>GLM</li>
+            <li>stb_image</li>
         </ul>
+    </div>
 
-        <h3>Software Engineering Improvements</h3>
-
-        <p>
-            One major focus of this enhancement was improving the software engineering
-            quality of the original application. The original project relied heavily
-            on procedural rendering logic with limited modularity. During enhancement,
-            the rendering system was reorganized into reusable components and callback
-            functions to improve maintainability and readability.
-        </p>
-
-        <p>
-            The enhanced version also introduced more advanced graphical features using
-            OpenGL, GLFW, GLEW, GLM, and stb_image libraries. These additions improved
-            rendering realism while also demonstrating the ability to integrate
-            industry-standard graphics technologies into an existing software project.
-        </p>
-
-        <h3>Reflection</h3>
-
-        <p>
-            Through this enhancement process, I gained valuable experience in graphics
-            programming, shader debugging, rendering optimization, and software
-            refinement. One of the most important lessons learned was the importance
-            of modular software design when building increasingly complex graphical
-            applications.
-        </p>
-
-        <p>
-            Several technical challenges occurred during development, including lighting
-            calculations, transformation management, camera movement, and debugging
-            rendering behavior. Solving these issues strengthened my understanding
-            of real-time graphics rendering and improved my debugging and
-            problem-solving abilities.
-        </p>
-
-        <div class="highlight">
-            <strong>Technologies Used:</strong>
-            <ul>
-                <li>C++</li>
-                <li>OpenGL</li>
-                <li>GLFW</li>
-                <li>GLEW</li>
-                <li>GLM</li>
-                <li>stb_image</li>
-            </ul>
-        </div>
-
-    </section>
-
-
-    <!-- ENHANCEMENT 2 -->
-
-    <section class="section" id="enhancement2">
-
-        <h2>Enhancement Two</h2>
-
-        <div class="placeholder">
-            <p>
-                This section will include the second enhancement artifact and reflection.
-            </p>
-        </div>
-
-    </section>
-
-
-    <!-- ENHANCEMENT 3 -->
-
-    <section class="section" id="enhancement3">
-
-        <h2>Enhancement Three</h2>
-
-        <div class="placeholder">
-            <p>
-                This section will include the third enhancement artifact and reflection.
-            </p>
-        </div>
-
-    </section>
-
-</div>
-
-<footer>
-    <p>CS 499 Computer Science ePortfolio | Seunghwan Lee</p>
-</footer>
-
-</body>
-</html>
+</section>

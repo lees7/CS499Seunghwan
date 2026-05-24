@@ -3,260 +3,287 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS 499 ePortfolio | Enhancement One</title>
+
+    <title>CS 499 ePortfolio | Seunghwan Lee</title>
 
     <style>
-        body {
-            margin: 0;
-            padding: 0;
+
+        body{
+            margin:0;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f4f4;
-            color: #222;
-            line-height: 1.7;
+            background-color:#f4f4f4;
+            color:#222;
+            line-height:1.7;
         }
 
-        header {
-            background-color: #1f2937;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
+        header{
+            background-color:#111827;
+            color:white;
+            padding:40px 20px;
+            text-align:center;
         }
 
-        header h1 {
-            margin-bottom: 10px;
-            font-size: 2.5rem;
+        header h1{
+            margin:0;
+            font-size:2.7rem;
         }
 
-        header p {
-            font-size: 1.1rem;
-            color: #d1d5db;
+        header p{
+            margin-top:10px;
+            color:#d1d5db;
         }
 
-        nav {
-            background-color: #111827;
-            padding: 15px;
-            text-align: center;
+        nav{
+            background-color:#1f2937;
+            padding:15px;
+            text-align:center;
         }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:0 20px;
+            font-weight:bold;
         }
 
-        nav a:hover {
-            color: #60a5fa;
+        nav a:hover{
+            color:#60a5fa;
         }
 
-        .container {
-            width: 85%;
-            max-width: 1100px;
-            margin: 40px auto;
+        .container{
+            width:85%;
+            max-width:1100px;
+            margin:40px auto;
         }
 
-        .section {
-            background-color: white;
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        .section{
+            background:white;
+            padding:35px;
+            margin-bottom:35px;
+            border-radius:10px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.1);
         }
 
-        h2 {
-            color: #1f2937;
-            margin-bottom: 15px;
+        h2{
+            color:#1f2937;
+            border-bottom:2px solid #e5e7eb;
+            padding-bottom:10px;
         }
 
-        h3 {
-            color: #374151;
-            margin-top: 25px;
+        h3{
+            color:#374151;
+            margin-top:25px;
         }
 
-        ul {
-            padding-left: 20px;
+        ul{
+            padding-left:20px;
         }
 
-        .highlight {
-            background-color: #e0f2fe;
-            padding: 15px;
-            border-left: 5px solid #0284c7;
-            margin-top: 20px;
+        .placeholder{
+            background-color:#f9fafb;
+            border-left:5px solid #9ca3af;
+            padding:15px;
+            margin-top:20px;
         }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #1f2937;
-            color: white;
-            margin-top: 40px;
+        .highlight{
+            background-color:#e0f2fe;
+            border-left:5px solid #0284c7;
+            padding:15px;
+            margin-top:20px;
         }
 
-        .code-box {
-            background-color: #111827;
-            color: #f9fafb;
-            padding: 15px;
-            border-radius: 8px;
-            overflow-x: auto;
-            margin-top: 15px;
-            font-family: Consolas, monospace;
+        footer{
+            background-color:#111827;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:40px;
         }
 
-        .button {
-            display: inline-block;
-            padding: 12px 20px;
-            background-color: #2563eb;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 15px;
-        }
-
-        .button:hover {
-            background-color: #1d4ed8;
-        }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>CS 499 Computer Science ePortfolio</h1>
-        <p>Enhancement One: Software Design and Engineering</p>
-    </header>
+<header>
+    <h1>CS 499 Computer Science ePortfolio</h1>
+    <p>Seunghwan Lee</p>
+</header>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Enhancement One</a>
-        <a href="#">Artifacts</a>
-        <a href="#">Contact</a>
-    </nav>
+<nav>
+    <a href="#introduction">Introduction</a>
+    <a href="#enhancement1">Enhancement 1</a>
+    <a href="#enhancement2">Enhancement 2</a>
+    <a href="#enhancement3">Enhancement 3</a>
+</nav>
 
-    <div class="container">
+<div class="container">
 
-        <section class="section">
-            <h2>Artifact Overview</h2>
+    <!-- INTRODUCTION -->
 
-            <p>
-                The artifact selected for this enhancement was originally created in 
-                CS-330 Computational Graphics and Visualization. The project focused on 
-                implementing graphical rendering concepts using OpenGL, including shader 
-                programs, vertex buffers, and object transformations.
-            </p>
+    <section class="section" id="introduction">
 
-            <p>
-                The original artifact displayed simple colored geometry using basic rendering 
-                techniques. For this enhancement, the application was expanded to include 
-                advanced lighting, interactive camera controls, real-time transformations, 
-                depth testing, and improved rendering architecture.
-            </p>
+        <h2>Introduction</h2>
 
-            <div class="highlight">
-                <strong>Technologies Used:</strong>
-                <ul>
-                    <li>OpenGL</li>
-                    <li>GLFW</li>
-                    <li>GLEW</li>
-                    <li>GLM</li>
-                    <li>stb_image</li>
-                    <li>C++</li>
-                </ul>
-            </div>
-        </section>
+        <p>
+            Welcome to my CS 499 Computer Science ePortfolio. This portfolio showcases
+            the skills, knowledge, and technical growth I developed throughout the
+            Computer Science program at Southern New Hampshire University.
+        </p>
 
-        <section class="section">
-            <h2>Enhancement Goals</h2>
+        <p>
+            The purpose of this ePortfolio is to demonstrate my ability to design,
+            develop, improve, and evaluate software applications through practical
+            projects and technical enhancements. Each enhancement included in this
+            portfolio reflects important computer science concepts such as software
+            engineering, algorithms and data structures, databases, graphics programming,
+            debugging, and software refinement.
+        </p>
 
-            <p>
-                The primary goal of this enhancement was to improve both the graphical 
-                realism and the software engineering quality of the original artifact.
-            </p>
+        <p>
+            Throughout the program, I gained experience working with programming
+            languages, software development tools, graphics libraries, and problem-solving
+            techniques used in modern computing environments. The artifacts presented
+            in this portfolio demonstrate both technical implementation skills and the
+            ability to improve existing software through meaningful engineering enhancements.
+        </p>
 
-            <h3>Enhancements Implemented</h3>
-
+        <div class="highlight">
+            <strong>Core Skills Demonstrated:</strong>
             <ul>
-                <li>Implemented Phong lighting model</li>
-                <li>Added ambient, diffuse, and specular lighting</li>
-                <li>Integrated interactive camera controls</li>
-                <li>Added perspective projection and depth testing</li>
-                <li>Implemented orbiting light animation</li>
-                <li>Improved rendering organization and maintainability</li>
-                <li>Integrated additional graphics libraries</li>
-                <li>Enhanced debugging and shader management</li>
+                <li>Software Design and Engineering</li>
+                <li>Debugging and Testing</li>
+                <li>Object-Oriented Programming</li>
+                <li>Computer Graphics Programming</li>
+                <li>Problem Solving and Optimization</li>
+                <li>Technical Communication</li>
             </ul>
-        </section>
+        </div>
 
-        <section class="section">
-            <h2>Software Engineering Improvements</h2>
+    </section>
 
-            <p>
-                The enhancement process focused heavily on improving the maintainability, 
-                organization, and scalability of the original application.
-            </p>
 
-            <h3>Key Improvements</h3>
+    <!-- ENHANCEMENT 1 -->
 
+    <section class="section" id="enhancement1">
+
+        <h2>Enhancement One: Software Design and Engineering</h2>
+
+        <h3>Artifact Overview</h3>
+
+        <p>
+            The artifact selected for this enhancement was originally developed in
+            CS-330 Computational Graphics and Visualization. The original project focused
+            on implementing foundational graphics rendering concepts using OpenGL,
+            including shader programs, vertex buffer objects, and geometric rendering.
+        </p>
+
+        <p>
+            The original artifact displayed simple geometric objects using basic color
+            rendering techniques. For this enhancement, the project was expanded to
+            include advanced lighting calculations, interactive camera controls,
+            perspective projection, depth testing, and improved rendering architecture.
+        </p>
+
+        <h3>Enhancements Implemented</h3>
+
+        <ul>
+            <li>Implemented Phong lighting model</li>
+            <li>Added ambient, diffuse, and specular lighting</li>
+            <li>Integrated interactive camera movement</li>
+            <li>Added keyboard and mouse controls</li>
+            <li>Implemented depth testing and perspective projection</li>
+            <li>Created dynamic orbiting light animation</li>
+            <li>Improved shader organization and rendering structure</li>
+            <li>Integrated additional graphics libraries</li>
+            <li>Improved maintainability and debugging capability</li>
+        </ul>
+
+        <h3>Software Engineering Improvements</h3>
+
+        <p>
+            One major focus of this enhancement was improving the software engineering
+            quality of the original application. The original project relied heavily
+            on procedural rendering logic with limited modularity. During enhancement,
+            the rendering system was reorganized into reusable components and callback
+            functions to improve maintainability and readability.
+        </p>
+
+        <p>
+            The enhanced version also introduced more advanced graphical features using
+            OpenGL, GLFW, GLEW, GLM, and stb_image libraries. These additions improved
+            rendering realism while also demonstrating the ability to integrate
+            industry-standard graphics technologies into an existing software project.
+        </p>
+
+        <h3>Reflection</h3>
+
+        <p>
+            Through this enhancement process, I gained valuable experience in graphics
+            programming, shader debugging, rendering optimization, and software
+            refinement. One of the most important lessons learned was the importance
+            of modular software design when building increasingly complex graphical
+            applications.
+        </p>
+
+        <p>
+            Several technical challenges occurred during development, including lighting
+            calculations, transformation management, camera movement, and debugging
+            rendering behavior. Solving these issues strengthened my understanding
+            of real-time graphics rendering and improved my debugging and
+            problem-solving abilities.
+        </p>
+
+        <div class="highlight">
+            <strong>Technologies Used:</strong>
             <ul>
-                <li>Separated rendering and shader responsibilities</li>
-                <li>Implemented reusable callback functions</li>
-                <li>Improved code readability and documentation</li>
-                <li>Added modular rendering logic</li>
-                <li>Improved camera and transformation management</li>
-                <li>Enhanced shader compilation and debugging support</li>
+                <li>C++</li>
+                <li>OpenGL</li>
+                <li>GLFW</li>
+                <li>GLEW</li>
+                <li>GLM</li>
+                <li>stb_image</li>
             </ul>
+        </div>
 
-            <div class="code-box">
-                Example Features Added:
-                <br><br>
-                • Dynamic lighting calculations<br>
-                • Mouse and keyboard interaction<br>
-                • Matrix transformations<br>
-                • Perspective camera system<br>
-                • Real-time object rendering
-            </div>
-        </section>
+    </section>
 
-        <section class="section">
-            <h2>Reflection</h2>
 
+    <!-- ENHANCEMENT 2 -->
+
+    <section class="section" id="enhancement2">
+
+        <h2>Enhancement Two</h2>
+
+        <div class="placeholder">
             <p>
-                Through this enhancement, I gained valuable experience in both graphics 
-                programming and software engineering refinement. One of the biggest lessons 
-                learned was the importance of modular and maintainable code organization 
-                when building increasingly complex graphical applications.
+                This section will include the second enhancement artifact and reflection.
             </p>
+        </div>
 
+    </section>
+
+
+    <!-- ENHANCEMENT 3 -->
+
+    <section class="section" id="enhancement3">
+
+        <h2>Enhancement Three</h2>
+
+        <div class="placeholder">
             <p>
-                During development, I encountered several challenges related to lighting 
-                calculations, camera movement, shader debugging, and transformation matrices. 
-                Solving these issues improved my understanding of the graphics rendering 
-                pipeline and strengthened my debugging and problem-solving abilities.
+                This section will include the third enhancement artifact and reflection.
             </p>
+        </div>
 
-            <p>
-                This enhancement allowed me to transform a foundational graphics assignment 
-                into a more advanced interactive application while demonstrating software 
-                engineering skills related to maintainability, scalability, debugging, 
-                and refinement.
-            </p>
-        </section>
+    </section>
 
-        <section class="section">
-            <h2>Artifact Files</h2>
+</div>
 
-            <p>
-                The enhanced artifact includes the original project files, updated rendering 
-                logic, shader programs, lighting implementation, and supporting graphics libraries.
-            </p>
-
-            <a href="#" class="button">Download Artifact Files</a>
-        </section>
-
-    </div>
-
-    <footer>
-        <p>CS 499 Computer Science ePortfolio | Seunghwan Lee</p>
-    </footer>
+<footer>
+    <p>CS 499 Computer Science ePortfolio | Seunghwan Lee</p>
+</footer>
 
 </body>
 </html>

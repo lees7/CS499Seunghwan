@@ -285,17 +285,132 @@
 
     <!-- ENHANCEMENT 2 -->
 
-    <section class="section" id="enhancement2">
+<section class="section" id="enhancement2">
 
-        <h2>Enhancement Two</h2>
+    <h2>Enhancement Two: Algorithms and Data Structures</h2>
 
-        <div class="placeholder">
-            <p>
-                This section will include the second enhancement artifact and reflection.
-            </p>
-        </div>
+    <h3>Artifact Overview</h3>
 
-    </section>
+    <p>
+        The artifact selected for this enhancement was originally developed in
+        CS-320 Software Test, Automation, and Quality Assurance. The project
+        consists of ContactService, TaskService, and AppointmentService classes
+        that provide backend functionality for managing contacts, tasks, and
+        appointments. The original implementation focused on CRUD operations,
+        validation, and software testing to ensure data integrity and reliability.
+    </p>
+
+    <p>
+        While the original artifact successfully managed application data, it
+        provided opportunities to improve efficiency, scalability, and data
+        retrieval capabilities through more advanced data structures and algorithms.
+        For this enhancement, I redesigned portions of the backend services to
+        incorporate optimized storage, searching, filtering, and sorting operations.
+    </p>
+
+    <h3>Enhancements Implemented</h3>
+
+    <ul>
+        <li>Implemented HashMap-based storage for efficient data management</li>
+        <li>Added contact search by first name, last name, and phone number</li>
+        <li>Added task search by task name and description keyword</li>
+        <li>Added appointment search by description keyword</li>
+        <li>Implemented filtering operations for contacts, tasks, and appointments</li>
+        <li>Added sorting functionality for contacts, tasks, and appointments</li>
+        <li>Expanded backend retrieval methods</li>
+        <li>Added task counting and collection management functionality</li>
+        <li>Expanded JUnit testing to validate all enhancements</li>
+    </ul>
+
+    <h3>Algorithms and Data Structure Improvements</h3>
+
+    <p>
+        A primary goal of this enhancement was improving performance and scalability.
+        HashMap data structures were utilized throughout the service classes to
+        provide efficient record storage and retrieval. Using HashMaps allows
+        insertion, lookup, and deletion operations to execute in average constant
+        time complexity, O(1), making the services significantly more efficient
+        as the number of stored records increases.
+    </p>
+
+    <p>
+        Additional search algorithms were implemented to allow users to locate
+        records using names, phone numbers, descriptions, and keywords. Filtering
+        functionality was added to return records matching specific criteria, while
+        sorting operations were implemented to organize information into meaningful
+        order for improved usability and accessibility.
+    </p>
+
+    <div class="highlight">
+        <strong>Algorithm Complexity Analysis:</strong>
+
+        <ul>
+            <li>HashMap Insert Operations: O(1)</li>
+            <li>HashMap Retrieval Operations: O(1)</li>
+            <li>HashMap Delete Operations: O(1)</li>
+            <li>Search Operations: O(n)</li>
+            <li>Filtering Operations: O(n)</li>
+            <li>Sorting Operations: O(n log n)</li>
+        </ul>
+    </div>
+
+    <h3>Testing and Validation</h3>
+
+    <p>
+        To verify the correctness of the enhanced functionality, I expanded the
+        existing JUnit test suites to include search, filtering, sorting, retrieval,
+        update, and deletion operations. These tests helped validate algorithm
+        correctness and ensured that the enhancements did not negatively impact
+        existing functionality.
+    </p>
+
+    <p>
+        The testing process strengthened overall software reliability and reinforced
+        the importance of automated testing when implementing new features within
+        an existing codebase.
+    </p>
+
+    <h3>Reflection</h3>
+
+    <p>
+        This enhancement strengthened my understanding of how data structures and
+        algorithms directly impact software performance. Implementing HashMaps
+        demonstrated the importance of selecting appropriate data structures to
+        improve efficiency and scalability. I also gained practical experience
+        developing search, filtering, and sorting functionality within a real-world
+        backend application.
+    </p>
+
+    <p>
+        One challenge involved integrating new algorithmic functionality while
+        maintaining readability and reliability throughout the existing system.
+        Expanding the JUnit test suite helped verify correctness and reinforced
+        the importance of testing in professional software development.
+    </p>
+
+    <p>
+        Overall, this enhancement improved my skills in algorithm optimization,
+        data structure selection, backend service development, software testing,
+        and performance analysis. The completed artifact demonstrates my ability
+        to evaluate existing software, identify improvement opportunities, and
+        implement efficient solutions that provide additional value to users.
+    </p>
+
+    <div class="highlight">
+        <strong>Technologies Used:</strong>
+
+        <ul>
+            <li>Java</li>
+            <li>HashMap Data Structures</li>
+            <li>Object-Oriented Programming</li>
+            <li>Search Algorithms</li>
+            <li>Filtering Algorithms</li>
+            <li>Sorting Algorithms</li>
+            <li>JUnit Testing</li>
+        </ul>
+    </div>
+
+</section>
 
 
     <!-- ENHANCEMENT 3 -->

@@ -1,136 +1,322 @@
-<!-- ENHANCEMENT 2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<section class="section" id="enhancement2">
+    <title>CS 499 ePortfolio | Seunghwan Lee</title>
 
-    <h2>Enhancement Two: Algorithms and Data Structures</h2>
+    <style>
 
-    <h3>Artifact Overview</h3>
+        body{
+            margin:0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color:#f4f4f4;
+            color:#222;
+            line-height:1.7;
+        }
 
-    <p>
-        The artifact selected for this enhancement was originally developed in
-        CS-320 Software Test, Automation, and Quality Assurance. The project
-        consisted of three backend service classes: ContactService,
-        TaskService, and AppointmentService. These services were designed
-        to manage contacts, tasks, and appointments while enforcing
-        validation rules and maintaining data integrity.
-    </p>
+        header{
+            background-color:#111827;
+            color:white;
+            padding:40px 20px;
+            text-align:center;
+        }
 
-    <p>
-        The original implementation provided basic CRUD functionality,
-        including creating, updating, retrieving, and deleting records.
-        While functional, the project offered opportunities for enhancement
-        through improved data structures, search capabilities, filtering
-        functionality, sorting algorithms, and expanded testing.
-    </p>
+        header h1{
+            margin:0;
+            font-size:2.7rem;
+        }
 
-    <h3>Enhancements Implemented</h3>
+        header p{
+            margin-top:10px;
+            color:#d1d5db;
+        }
 
-    <ul>
-        <li>Optimized backend storage using HashMap data structures</li>
-        <li>Implemented O(1) record retrieval by unique identifier</li>
-        <li>Added contact search by first name, last name, and phone number</li>
-        <li>Added task search by task name and description keywords</li>
-        <li>Added appointment search by description keyword</li>
-        <li>Implemented filtering by area code for contacts</li>
-        <li>Implemented filtering by date range for appointments</li>
-        <li>Implemented task filtering by name prefix</li>
-        <li>Added sorting algorithms for contacts, tasks, and appointments</li>
-        <li>Expanded JUnit testing for new functionality</li>
-    </ul>
+        nav{
+            background-color:#1f2937;
+            padding:15px;
+            text-align:center;
+        }
 
-    <h3>Algorithms and Data Structure Improvements</h3>
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:0 20px;
+            font-weight:bold;
+        }
 
-    <p>
-        A major focus of this enhancement was improving the efficiency and
-        scalability of the backend services. The system utilizes HashMap
-        data structures to store contacts, tasks, and appointments, allowing
-        insertion, deletion, and retrieval operations to execute in average
-        constant time complexity, O(1). This design choice significantly
-        improves performance as the number of stored records increases.
-    </p>
+        nav a:hover{
+            color:#60a5fa;
+        }
 
-    <p>
-        Additional algorithmic functionality was implemented to improve
-        data organization and retrieval. Search algorithms allow users to
-        locate records using names, phone numbers, descriptions, and other
-        attributes. Filtering operations return subsets of records matching
-        specific criteria, while sorting algorithms organize data into
-        meaningful order for improved usability.
-    </p>
+        .container{
+            width:85%;
+            max-width:1100px;
+            margin:40px auto;
+        }
 
-    <div class="highlight">
+        .section{
+            background:white;
+            padding:35px;
+            margin-bottom:35px;
+            border-radius:10px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.1);
+        }
 
-        <strong>Algorithm Complexity Analysis:</strong>
+        h2{
+            color:#1f2937;
+            border-bottom:2px solid #e5e7eb;
+            padding-bottom:10px;
+        }
+
+        h3{
+            color:#374151;
+            margin-top:25px;
+        }
+
+        ul{
+            padding-left:20px;
+        }
+
+        .placeholder{
+            background-color:#f9fafb;
+            border-left:5px solid #9ca3af;
+            padding:15px;
+            margin-top:20px;
+        }
+
+        .highlight{
+            background-color:#e0f2fe;
+            border-left:5px solid #0284c7;
+            padding:15px;
+            margin-top:20px;
+        }
+
+        .image-container{
+            text-align:center;
+            margin-top:25px;
+            margin-bottom:25px;
+        }
+
+        .image-container img{
+            width:80%;
+            max-width:700px;
+            border-radius:10px;
+            box-shadow:0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .image-caption{
+            margin-top:15px;
+            color:#555;
+            font-size:0.95rem;
+        }
+
+        footer{
+            background-color:#111827;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:40px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>CS 499 Computer Science ePortfolio</h1>
+    <p>Seunghwan Lee</p>
+</header>
+
+<nav>
+    <a href="#introduction">Introduction</a>
+    <a href="#enhancement1">Enhancement 1</a>
+    <a href="#enhancement2">Enhancement 2</a>
+    <a href="#enhancement3">Enhancement 3</a>
+</nav>
+
+<div class="container">
+
+    <!-- INTRODUCTION -->
+
+    <section class="section" id="introduction">
+
+        <h2>Introduction</h2>
+
+        <p>
+            Welcome to my CS 499 Computer Science ePortfolio. This portfolio showcases
+            the skills, knowledge, and technical growth I developed throughout the
+            Computer Science program at Southern New Hampshire University.
+        </p>
+
+        <p>
+            The purpose of this ePortfolio is to demonstrate my ability to design,
+            develop, improve, and evaluate software applications through practical
+            projects and technical enhancements. Each enhancement included in this
+            portfolio reflects important computer science concepts such as software
+            engineering, algorithms and data structures, databases, graphics programming,
+            debugging, and software refinement.
+        </p>
+
+        <p>
+            Throughout the program, I gained experience working with programming
+            languages, software development tools, graphics libraries, and problem-solving
+            techniques used in modern computing environments. The artifacts presented
+            in this portfolio demonstrate both technical implementation skills and the
+            ability to improve existing software through meaningful engineering enhancements.
+        </p>
+
+        <div class="highlight">
+            <strong>Core Skills Demonstrated:</strong>
+            <ul>
+                <li>Software Design and Engineering</li>
+                <li>Debugging and Testing</li>
+                <li>Object-Oriented Programming</li>
+                <li>Computer Graphics Programming</li>
+                <li>Problem Solving and Optimization</li>
+                <li>Technical Communication</li>
+            </ul>
+        </div>
+
+    </section>
+
+
+    <!-- ENHANCEMENT 1 -->
+
+    <section class="section" id="enhancement1">
+
+        <h2>Enhancement One: Software Design and Engineering</h2>
+
+        <h3>Artifact Overview</h3>
+
+        <p>
+            The artifact selected for this enhancement was originally developed in
+            CS-330 Computational Graphics and Visualization. The original project focused
+            on implementing foundational graphics rendering concepts using OpenGL,
+            including shader programs, vertex buffer objects, and geometric rendering.
+        </p>
+
+        <p>
+            The original artifact displayed simple geometric objects using basic color
+            rendering techniques. For this enhancement, the project was expanded to
+            include advanced lighting calculations, interactive camera controls,
+            perspective projection, depth testing, and improved rendering architecture.
+        </p>
+
+        <h3>Final Enhanced Result</h3>
+
+        <div class="image-container">
+
+            <img src="final-result.png"
+                 alt="Enhanced OpenGL Pyramid Project">
+
+            <p class="image-caption">
+                Figure 1: Final enhanced OpenGL pyramid project with lighting,
+                transformations, and improved rendering functionality.
+            </p>
+
+        </div>
+
+        <h3>Enhancements Implemented</h3>
 
         <ul>
-            <li>HashMap Insert Operations: O(1)</li>
-            <li>HashMap Retrieval Operations: O(1)</li>
-            <li>HashMap Delete Operations: O(1)</li>
-            <li>Search Operations: O(n)</li>
-            <li>Filtering Operations: O(n)</li>
-            <li>Sorting Operations: O(n log n)</li>
+            <li>Implemented Phong lighting model</li>
+            <li>Added ambient, diffuse, and specular lighting</li>
+            <li>Integrated interactive camera movement</li>
+            <li>Added keyboard and mouse controls</li>
+            <li>Implemented depth testing and perspective projection</li>
+            <li>Created dynamic orbiting light animation</li>
+            <li>Improved shader organization and rendering structure</li>
+            <li>Integrated additional graphics libraries</li>
+            <li>Improved maintainability and debugging capability</li>
         </ul>
 
-    </div>
+        <h3>Software Engineering Improvements</h3>
 
-    <h3>Testing and Validation</h3>
+        <p>
+            One major focus of this enhancement was improving the software engineering
+            quality of the original application. The original project relied heavily
+            on procedural rendering logic with limited modularity. During enhancement,
+            the rendering system was reorganized into reusable components and callback
+            functions to improve maintainability and readability.
+        </p>
 
-    <p>
-        To ensure the correctness of the enhanced algorithms and data
-        structures, the project's JUnit test suites were expanded to
-        include validation of search, filtering, sorting, retrieval,
-        update, and deletion functionality. Additional test cases were
-        developed to verify both successful operations and error-handling
-        behavior.
-    </p>
+        <p>
+            The enhanced version also introduced more advanced graphical features using
+            OpenGL, GLFW, GLEW, GLM, and stb_image libraries. These additions improved
+            rendering realism while also demonstrating the ability to integrate
+            industry-standard graphics technologies into an existing software project.
+        </p>
 
-    <p>
-        Comprehensive testing helped ensure that all enhancements operated
-        correctly while maintaining system reliability and data integrity.
-        The testing process also strengthened the maintainability of the
-        project and reduced the likelihood of future defects.
-    </p>
+        <h3>Reflection</h3>
 
-    <h3>Reflection</h3>
+        <p>
+            Through this enhancement process, I gained valuable experience in graphics
+            programming, shader debugging, rendering optimization, and software
+            refinement. One of the most important lessons learned was the importance
+            of modular software design when building increasingly complex graphical
+            applications.
+        </p>
 
-    <p>
-        Through this enhancement process, I gained a deeper understanding
-        of how data structures and algorithms directly influence software
-        performance and scalability. Implementing HashMaps reinforced the
-        importance of selecting the appropriate data structure based on
-        application requirements and performance goals.
-    </p>
+        <p>
+            Several technical challenges occurred during development, including lighting
+            calculations, transformation management, camera movement, and debugging
+            rendering behavior. Solving these issues strengthened my understanding
+            of real-time graphics rendering and improved my debugging and
+            problem-solving abilities.
+        </p>
 
-    <p>
-        Developing search, filtering, and sorting functionality provided
-        valuable experience in algorithm design and complexity analysis.
-        One of the most important lessons learned was how small design
-        decisions can significantly impact system efficiency and user
-        experience as applications grow in size and complexity.
-    </p>
+        <div class="highlight">
+            <strong>Technologies Used:</strong>
+            <ul>
+                <li>C++</li>
+                <li>OpenGL</li>
+                <li>GLFW</li>
+                <li>GLEW</li>
+                <li>GLM</li>
+                <li>stb_image</li>
+            </ul>
+        </div>
 
-    <p>
-        A significant challenge involved integrating new algorithms into
-        the existing architecture while maintaining reliability and
-        readability. Expanding automated testing and validating each
-        enhancement helped ensure that the project remained stable and
-        maintainable throughout the development process.
-    </p>
+    </section>
 
-    <div class="highlight">
 
-        <strong>Technologies Used:</strong>
+    <!-- ENHANCEMENT 2 -->
 
-        <ul>
-            <li>Java</li>
-            <li>Object-Oriented Programming</li>
-            <li>HashMap Data Structures</li>
-            <li>Search Algorithms</li>
-            <li>Filtering Algorithms</li>
-            <li>Sorting Algorithms</li>
-            <li>JUnit Testing Framework</li>
-        </ul>
+    <section class="section" id="enhancement2">
 
-    </div>
+        <h2>Enhancement Two</h2>
 
-</section>
+        <div class="placeholder">
+            <p>
+                This section will include the second enhancement artifact and reflection.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- ENHANCEMENT 3 -->
+
+    <section class="section" id="enhancement3">
+
+        <h2>Enhancement Three</h2>
+
+        <div class="placeholder">
+            <p>
+                This section will include the third enhancement artifact and reflection.
+            </p>
+        </div>
+
+    </section>
+
+</div>
+
+<footer>
+    <p>CS 499 Computer Science ePortfolio | Seunghwan Lee</p>
+</footer>
+
+</body>
+</html>

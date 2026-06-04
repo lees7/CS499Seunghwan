@@ -417,13 +417,132 @@
 
     <section class="section" id="enhancement3">
 
-        <h2>Enhancement Three</h2>
+<h2>Enhancement Three: Databases</h2>
 
-        <div class="placeholder">
-            <p>
-                This section will include the third enhancement artifact and reflection.
-            </p>
-        </div>
+<h3>Artifact Overview</h3>
+
+<p>
+    The artifact selected for this enhancement was originally developed in
+    CS-340 Client/Server Development. The project involved creating a
+    database-driven dashboard application for Grazioso Salvare, an animal
+    rescue organization that uses animal shelter data to identify candidates
+    for specialized rescue operations. The original application connected to
+    a MongoDB database and displayed animal records through a web-based
+    dashboard interface.
+</p>
+
+<p>
+    While the original project successfully demonstrated database connectivity
+    and data visualization, opportunities existed to improve maintainability,
+    modularity, and database interaction. For this enhancement, I redesigned
+    the database layer by implementing a reusable CRUD module and improving
+    the overall architecture of the application. These changes created a more
+    scalable solution while demonstrating advanced database management skills.
+</p>
+
+<h3>Enhancements Implemented</h3>
+
+<ul>
+    <li>Developed a reusable CRUD Python module for MongoDB operations</li>
+    <li>Implemented Create, Read, Update, and Delete database functionality</li>
+    <li>Added database connection validation and error handling</li>
+    <li>Separated database logic from dashboard presentation logic</li>
+    <li>Improved MongoDB query organization and maintainability</li>
+    <li>Implemented dynamic filtering for rescue categories</li>
+    <li>Integrated database queries with interactive dashboard components</li>
+    <li>Improved data retrieval and visualization workflows</li>
+    <li>Enhanced application scalability through modular design</li>
+</ul>
+
+<h3>Database Improvements</h3>
+
+<p>
+    The primary focus of this enhancement was improving database design and
+    software architecture. The original project accessed MongoDB directly
+    within the dashboard application, which tightly coupled the user interface
+    with database operations. To improve maintainability, I developed a
+    dedicated CRUD module that encapsulates all database functionality into
+    reusable methods.
+</p>
+
+<p>
+    The CRUD module provides separate methods for creating, reading,
+    updating, and deleting records within the MongoDB collection. This
+    approach follows software engineering best practices by separating
+    concerns and reducing dependencies between application components.
+    As a result, future modifications to database operations can be made
+    without significantly impacting the dashboard interface.
+</p>
+
+<p>
+    Additional improvements included implementing more efficient MongoDB
+    queries to support Grazioso Salvare's rescue requirements. The dashboard
+    dynamically filters records based on breed, age, and sex characteristics
+    associated with Water Rescue, Mountain/Wilderness Rescue, and
+    Disaster/Individual Tracking operations. These queries provide users
+    with meaningful data subsets while maintaining responsiveness and
+    usability.
+</p>
+
+<h3>Testing and Validation</h3>
+
+<p>
+    Extensive testing was performed to validate database connectivity,
+    CRUD functionality, and dashboard integration. Individual CRUD methods
+    were tested to verify successful record insertion, retrieval, updating,
+    and deletion. Additional testing confirmed that dashboard filters
+    correctly returned matching records from MongoDB and updated associated
+    visualizations.
+</p>
+
+<p>
+    Error handling was also tested to ensure the application responded
+    appropriately when invalid data or connection issues occurred. These
+    validation procedures improved overall reliability and demonstrated the
+    importance of robust database testing practices.
+</p>
+
+<h3>Reflection</h3>
+
+<p>
+    This enhancement strengthened my understanding of database management,
+    client-server architecture, and data-driven application development.
+    Designing a reusable CRUD module demonstrated the value of modular
+    programming and reinforced the importance of separating database logic
+    from presentation logic.
+</p>
+
+<p>
+    One challenge involved designing MongoDB queries that efficiently
+    supported the rescue operation requirements while maintaining dashboard
+    performance. Addressing this challenge improved my ability to work with
+    NoSQL databases and optimize database interactions within larger
+    software systems.
+</p>
+
+<p>
+    Overall, this enhancement improved my skills in database design,
+    MongoDB administration, Python application development, software
+    architecture, and data visualization integration. The completed artifact
+    demonstrates my ability to design and implement database solutions that
+    support real-world business requirements while maintaining scalability,
+    reliability, and maintainability.
+</p>
+
+<div class="highlight">
+    <strong>Technologies Used:</strong>
+
+    <ul>
+        <li>Python</li>
+        <li>MongoDB</li>
+        <li>PyMongo</li>
+        <li>Dash</li>
+        <li>Plotly Express</li>
+        <li>Dash Leaflet</li>
+        <li>CRUD Architecture</li>
+        <li>Client/Server Development</li>
+    </ul>
+</div>
 
     </section>
 

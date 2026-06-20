@@ -1,0 +1,185 @@
+#include <iostream>
+#include <cstdlib>
+#include <GL/glew.h>    
+#include <GLFW/glfw3.h>
+
+using namespace std;
+
+namespace {
+    const char* const WINDOW_TITLE = "Static White Pyramid";
+    const int WINDOW_WIDTH = 800;
+    const int WINDOW_HEIGHT = 600;
+
+    struct GLMesh {
+        GLuint vao;
+        GLuint vbo;
+        GLuint nvertices;
+    };
+
+    GLFWwindow* gWindow = nullptr;
+    GLMesh gMesh;
+    GLuint gProgramId;
+}
+
+// Prototypes
+bool UInitialize(int, char* [], GLFWwindow** window);
+void UResizeWindow(GLFWwindow* window, int width, int height);
+void UProcessInput(GLFWwindow* window);
+void UCreateMesh(GLMesh& mesh);
+void UDestroyMesh(GLMesh& mesh);
+void URender();
+bool UCreateShaderProgram(const char* vtxShaderSource, const char* fragShaderSource, GLuint& programId);
+void UDestroyShaderProgram(GLuint programId);
+
+// Vertex Shader: Position only
+const char* vertexShaderSource = "#version 440 core\n"
+"layout (location = 0) in vec3 aPos;\n"
+"void main()\n"
+"{\n"
+"   gl_Position = vec4(aPos, 1.0);\n"
+"}\n\0";
+
+// Fragment Shader: Outputs solid white (1.0, 1.0, 1.0)
+const char* fragmentShaderSource = "#version 440 core\n"
+"out vec4 FragColor;\n"
+"void main()\n"
+"{\n"
+"   FragColor = vec4(1.0, 1.0, 1.0, 1.0);\n"
+"}\n\0";
+
+int main(int argc, char* argv[]) {
+    if (!UInitialize(argc, argv, &gWindow)) return EXIT_FAILURE;
+
+    UCreateMesh(gMesh);
+    if (!UCreateShaderProgram(vertexShaderSource, fragmentShaderSource, gProgramId)) return EXIT_FAILURE;
+
+    glEnable(GL_DEPTH_TEST);
+
+    while (!glfwWindowShouldClose(gWindow)) {
+        UProcessInput(gWindow);
+        URender();
+        glfwPollEvents();
+    }
+
+    UDestroyMesh(gMesh);
+    UDestroyShaderProgram(gProgramId);
+    exit(EXIT_SUCCESS);
+}
+
+bool UInitialize(int argc, char* argv[], GLFWwindow** window) {
+    glfwInit();
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 4);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
+    *window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE, NULL, NULL);
+    if (*window == NULL) {
+        glfwTerminate();
+        return false;
+    }
+    glfwMakeContextCurrent(*window);
+    glfwSetFramebufferSizeCallback(*window, UResizeWindow);
+
+    glewExperimental = GL_TRUE;
+    if (glewInit() != GLEW_OK) return false;
+
+    return true;
+}
+
+void UProcessInput(GLFWwindow* window) {
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+        glfwSetWindowShouldClose(window, true);
+}
+
+void UResizeWindow(GLFWwindow* window, int width, int height) {
+    glViewport(0, 0, width, height);
+}
+
+void URender() {
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    glUseProgram(gProgramId);
+    glBindVertexArray(gMesh.vao);
+    glDrawArrays(GL_TRIANGLES, 0, gMesh.nvertices);
+    glBindVertexArray(0);
+
+    glfwSwapBuffers(gWindow);
+}
+
+void UCreateMesh(GLMesh& mesh) {
+    // Vertex data contains only X, Y, Z coordinates
+    GLfloat verts[] = {
+        // Front Face
+         0.0f,  0.5f, -0.2f,
+        -0.4f, -0.4f,  0.2f,
+         0.4f, -0.4f,  0.2f,
+
+         // Right Face
+          0.0f,  0.5f, -0.2f,
+          0.4f, -0.4f,  0.2f,
+          0.4f, -0.4f, -0.6f,
+
+          // Back Face
+           0.0f,  0.5f, -0.2f,
+           0.4f, -0.4f, -0.6f,
+          -0.4f, -0.4f, -0.6f,
+
+          // Left Face
+           0.0f,  0.5f, -0.2f,
+          -0.4f, -0.4f, -0.6f,
+          -0.4f, -0.4f,  0.2f
+    };
+
+    mesh.nvertices = 12;
+
+    glGenVertexArrays(1, &mesh.vao);
+    glGenBuffers(1, &mesh.vbo);
+    glBindVertexArray(mesh.vao);
+    glBindBuffer(GL_ARRAY_BUFFER, mesh.vbo);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(verts), verts, GL_STATIC_DRAW);
+
+    // Stride is now only 3 floats (x, y, z)
+    GLint stride = sizeof(float) * 3;
+
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, stride, 0);
+    glEnableVertexAttribArray(0);
+}
+
+void UDestroyMesh(GLMesh& mesh) {
+    glDeleteVertexArrays(1, &mesh.vao);
+    glDeleteBuffers(1, &mesh.vbo);
+}
+
+bool UCreateShaderProgram(const char* vtxShaderSource, const char* fragShaderSource, GLuint& programId) {
+    int success;
+    char infoLog[512];
+
+    programId = glCreateProgram();
+    GLuint vShader = glCreateShader(GL_VERTEX_SHADER);
+    GLuint fShader = glCreateShader(GL_FRAGMENT_SHADER);
+
+    glShaderSource(vShader, 1, &vtxShaderSource, NULL);
+    glShaderSource(fShader, 1, &fragShaderSource, NULL);
+
+    glCompileShader(vShader);
+    glCompileShader(fShader);
+
+    glAttachShader(programId, vShader);
+    glAttachShader(programId, fShader);
+    glLinkProgram(programId);
+
+    glGetProgramiv(programId, GL_LINK_STATUS, &success);
+    if (!success) {
+        glGetProgramInfoLog(programId, 512, NULL, infoLog);
+        return false;
+    }
+
+    glDeleteShader(vShader);
+    glDeleteShader(fShader);
+    return true;
+}
+
+void UDestroyShaderProgram(GLuint programId) {
+    glDeleteProgram(programId);
+}
